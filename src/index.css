@@ -13,6 +13,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.card {
+  padding: 2em;
+  }
+  .read-the-docs {
+    color: #888;
+  }
+  .box:nth-child(3n + 1) {
+    grid-column: 1;
+  }
+  .box:nth-child(3n + 2) {
+    grid-column: 2;
+  }
+  .box:nth-child(3n + 3) {
+    grid-column: 3;
+  }
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,9 +41,15 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh; /* fill viewport height so centering is exact */
+}
+
+/* Ensure the Amplify Authenticator/card uses its content size and is centered */
+.card {
+  margin: 0 auto;
 }
 
 h1 {
@@ -66,3 +88,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
